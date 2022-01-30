@@ -1,0 +1,98 @@
+/* CSS RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Linkando fontes */
+@font-face {
+    font-family: Spotify;
+    src: url(/assets/fonts/GothamBook.ttf);
+    src: url(/assets/fonts/Gotham-Black.otf);
+    font-weight: normal;
+}
+
+/* Animation para a logo */
+#loading {
+    animation: rotation 10s infinite linear;
+}
+@keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+body {
+    background-color: #535353;
+    font-family: Spotify;
+}
+
+section:nth-child(1) {
+    margin: 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section:nth-child(1) img {
+    width: 500px;
+}
+
+.form-div, .form-register {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 10px 24px -6px rgba(0,0,0,0.9);
+}
+
+.form-div input {
+    padding: 10px 70px;
+}
+
+.btn-register {
+    background-color: #b12625 !important;
+}
+.form-div button {
+    border: none;
+    background-color: #1db954;
+    color: white;
+    font-weight: 700;
+    border-radius: 15px;
+    padding: 5px 35px;
+    text-align: center;
+}
+
+
+section:nth-child(2) {
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #b12625;
+}
+
+/* Classes manipuladas por JS */
+.esconde-div {
+    display: none;
+}
