@@ -1,0 +1,137 @@
+/* CSS RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Linkando fontes */
+@font-face {
+    font-family: Spotify;
+    src: url(/assets/fonts/GothamBook.ttf);
+    src: url(/assets/fonts/Gotham-Black.otf);
+    font-weight: normal;
+}
+
+body {
+    font-family: Spotify;
+}
+
+/* Regras para pagina Profile */
+.foto-perfil {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto-perfil img {
+    border-radius: 15px;
+    width: 160px;
+    height: 200px;
+    margin: 20px 0;
+}
+
+.icons-perfil {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.icons-perfil div img {
+    max-width: 100%;
+    padding: 25px;
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.sobre-perfil {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.title-tracks {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: auto;
+}
+
+.title-tracks h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.tracks div {
+    display: flex;
+}
+
+.tracks img {
+    border-radius: 15px;
+    max-width: 100%;
+    padding: 7px;
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.tracks div figure {
+    text-align: center;
+}
+
+/* Media Queries */
+@media screen and (min-width: 600px) {
+    main {
+        max-width: 700px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    main {
+        max-width: 90%;
+    }
+
+    .icons-perfil div img {
+        max-width: 120px;
+    }
+
+    .title-tracks img {
+        max-width: 180px;
+        margin: auto;
+    }
+
+    .tracks div {
+        justify-content: space-evenly;
+    }
+
+    .tracks img {
+        max-width: 235px;
+    }
+
+    .foto-perfil {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    .foto-perfil div {
+        margin-top: 40px;
+    }
+
+    .bloco-sobre {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bloco-info {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+    }
+
+    .escutando-agora {
+        width: 45%;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+}
+

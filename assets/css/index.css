@@ -60,6 +60,19 @@ main {
     padding: 10px 70px;
 }
 
+.form-div label {
+    color: black;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button a:hover {
+    color: white;
+}
+
 .btn-register {
     background-color: #b12625 !important;
 }
@@ -97,66 +110,6 @@ footer a {
     text-decoration: none;
     color: #b12625;
 }
-
-/* Regras para pagina Profile */
-.foto-perfil {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.foto-perfil img {
-    border-radius: 15px;
-    width: 160px;
-    height: 200px;
-    margin: 20px auto;
-}
-
-.icons-perfil {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.icons-perfil div img {
-    max-width: 100%;
-    padding: 25px;
-    filter: drop-shadow(5px 5px 5px #222);
-}
-
-.sobre-perfil {
-    padding: 10px;
-    text-align: center;
-    font-size: 18px;
-}
-
-.title-tracks {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    margin: auto;
-}
-
-.title-tracks h3 {
-    font-size: 20px;
-    text-align: center;
-}
-
-.tracks div {
-    display: flex;
-}
-
-.tracks img {
-    border-radius: 15px;
-    max-width: 100%;
-    padding: 7px;
-    filter: drop-shadow(5px 5px 5px #222);
-}
-
-.tracks div figure {
-    text-align: center;
-}
-/* --------------------------- */
 
 /* Classes manipuladas por JS */
 .esconde-div {

@@ -1,0 +1,20 @@
+{
+  "type": "module",
+  "name": "projeto-integrador-senac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moutim/Projeto-Integrador-Senac.git"
+  },
+  "author": "Vitor Moutim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moutim/Projeto-Integrador-Senac/issues"
+  },
+  "homepage": "https://github.com/moutim/Projeto-Integrador-Senac#readme"
+}
