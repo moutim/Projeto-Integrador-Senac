@@ -18,7 +18,7 @@ const setProfileInfo = async () => {
     displaySeguidores.innerText = total;
     displayFoto.setAttribute('src', url);
 }
-// setProfileInfo();
+setProfileInfo();
 
 const setTopMusics = async () => {
     const data = await fetchData('v1/me/top/tracks');
@@ -65,7 +65,7 @@ const setCurrencyPlaying = async () => {
         createIframeMusic(idPlaylist, 'playlist')
     }
 }
-// setCurrencyPlaying();
+setCurrencyPlaying();
 
 const getInfoPlaylists = async () => {
     const data = await fetchData('v1/me/playlists');
