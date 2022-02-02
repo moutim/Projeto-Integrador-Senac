@@ -1,5 +1,3 @@
-const btn = document.querySelector('#play');
-
 const headers = () => {
     const acessToken = localStorage.getItem('acessToken');
     return {
@@ -9,15 +7,13 @@ const headers = () => {
     };
 };
 
-const fetchPlaylist = async () => {
-    const url = 'https://api.spotify.com/v1/me/top/tracks';
+const fetchData = async (endPoint) => {
+    const url = `https://api.spotify.com/${endPoint}`;
     try{
         const response = await fetch(url, headers());
         const data = await response.json();
-        console.log(data);
+        return data;
     } catch(erro){
         console.log(erro);
     }
 }
-
-btn.addEventListener('click', fetchPlaylist)

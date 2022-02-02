@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/moutim/Projeto-Integrador-Senac/issues"
   },
-  "homepage": "https://github.com/moutim/Projeto-Integrador-Senac#readme",
-  "dependencies": {
-    "mysql2": "^2.3.3"
-  }
+  "homepage": "https://github.com/moutim/Projeto-Integrador-Senac#readme"
 }

@@ -93,6 +93,11 @@ body {
         max-width: 120px;
     }
 
+    .tracks {
+        width: 100%;
+        /* display: flex; */
+    }
+
     .title-tracks img {
         max-width: 180px;
         margin: auto;
