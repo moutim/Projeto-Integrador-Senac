@@ -2,7 +2,7 @@ const btnRegistro = document.querySelector('#teste');
 
 const CLIENT_ID = '58cba2a8bbb440fa89bb0f2c6d74dedc';
 const URL_ATHORIZATION = 'https://accounts.spotify.com/authorize';
-const REDIRECT_URL = 'https://moutim.github.io/Projeto-Integrador-Senac/profile.html';
+const REDIRECT_URL = 'http://127.0.0.1:5500/profile.html';
 
 const scopesList = [
     'user-top-read',

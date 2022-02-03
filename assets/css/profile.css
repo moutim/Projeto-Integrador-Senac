@@ -15,9 +15,11 @@
 
 body {
     font-family: Spotify;
+    background-color: #191414;
+    color: white;
 }
 
-/* Regras para pagina Profile */
+/* Regras para a secao de informacoes do perfil*/
 .foto-perfil {
     display: flex;
     align-items: center;
@@ -26,9 +28,10 @@ body {
 
 .foto-perfil img {
     border-radius: 15px;
-    width: 160px;
+    width: 180px;
     height: 200px;
     margin: 20px 0;
+    filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.089));
 }
 
 .icons-perfil {
@@ -48,10 +51,26 @@ body {
     text-align: center;
     font-size: 18px;
 }
+/* ------------------------------ */
+
+/* Regras para secao de musicas */
+.selection-section {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    color: white;
+    background-color: #1db954;
+    border: 2px solid black;
+}
 
 .title-tracks {
     display: flex;
     flex-direction: column;
+}
+
+.title-tracks img {
     width: 25%;
     margin: auto;
 }
@@ -61,18 +80,22 @@ body {
     text-align: center;
 }
 
-.tracks div {
+.list-tracks, .list-artists {
     display: flex;
 }
 
-.tracks img {
+.section-top h2 {
+    text-align: center;
+}
+
+.tracks-section img {
     border-radius: 15px;
     max-width: 100%;
     padding: 7px;
     filter: drop-shadow(5px 5px 5px #222);
 }
 
-.tracks div figure {
+.tracks-section div figure {
     text-align: center;
 }
 
@@ -93,21 +116,25 @@ body {
         max-width: 120px;
     }
 
-    .tracks {
-        width: 100%;
-        /* display: flex; */
-    }
-
     .title-tracks img {
         max-width: 180px;
         margin: auto;
     }
 
-    .tracks div {
+    .section-top {
+        width: 85%;
+        margin: auto;
+    }
+
+    .section-top figure {
+        width: 30%;
+    }
+
+    .section-top div {
         justify-content: space-evenly;
     }
 
-    .tracks img {
+    .section-top img {
         max-width: 235px;
     }
 

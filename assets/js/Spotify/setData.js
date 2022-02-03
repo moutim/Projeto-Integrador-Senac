@@ -7,6 +7,9 @@ const displayPlaylists = document.querySelector('#numero-playlists')
 const displayFoto = document.querySelector('#foto-display');
 const displaySpotifyUrl = document.querySelector('#spotify-url');
 const displayTotalPlaylists = document.querySelector('#numero-playlists');
+const radioButtons = document.getElementsByName('time-range');
+const listTracks = document.querySelector('.list-tracks');
+const listArtists = document.querySelector('.list-artists');
 const btn = document.querySelector('#play');
 
 const setProfileInfo = async () => {
@@ -18,10 +21,10 @@ const setProfileInfo = async () => {
     displaySeguidores.innerText = total;
     displayFoto.setAttribute('src', url);
 }
-setProfileInfo();
+// setProfileInfo();
 
-const setTopMusics = async () => {
-    const data = await fetchData('v1/me/top/tracks');
+const setTopMusics = async (time = '?time_range=medium_term') => {
+    const data = await fetchData(`v1/me/top/tracks${time}`);
     const arrayMusic = [];
     data.items.forEach((item, index) => index <= 2 ? arrayMusic.push(item) : false );
     console.log(arrayMusic);
@@ -32,10 +35,10 @@ const setTopMusics = async () => {
         createDivTrack(url, name, artistName);
     })
 }
-setTopMusics();
+// setTopMusics();
 
-const setTopArtists = async () => {
-    const data = await fetchData('v1/me/top/artists');
+const setTopArtists = async (time = '?time_range=medium_term') => {
+    const data = await fetchData(`v1/me/top/artists${time}`);
     const arrayArtist = [];
     data.items.forEach((item, index) => index <= 2 ? arrayArtist.push(item) : false);
     arrayArtist.forEach((item) => {
@@ -44,7 +47,7 @@ const setTopArtists = async () => {
         createDivArtist(url, name);
     })
 }
-setTopArtists();
+// setTopArtists();
 
 const setCurrencyPlaying = async () => {
     const data = await fetchData('v1/me/player/recently-played');
@@ -65,13 +68,23 @@ const setCurrencyPlaying = async () => {
         createIframeMusic(idPlaylist, 'playlist')
     }
 }
-setCurrencyPlaying();
+// setCurrencyPlaying();
 
 const getInfoPlaylists = async () => {
-    const data = await fetchData('v1/me/playlists');
+    const data = await fetchData('v1/me/playlists?limit=50&offset=5');
     const { total } = data;
     console.log(data);
     displayTotalPlaylists.innerText = total;
 }
+// getInfoPlaylists();
 
-btn.addEventListener('click', setTopArtists);
+const getTrackByTimeRange = (event) => {
+    const time = event.target.value;
+    listArtists.innerText = '';
+    listTracks.innerText = '';
+    setTopArtists(`?time_range=${time}`);
+    setTopMusics(`?time_range=${time}`);
+}
+radioButtons.forEach((item) => item.addEventListener('change', getTrackByTimeRange));
+
+btn.addEventListener('click', getInfoPlaylists);

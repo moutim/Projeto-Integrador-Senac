@@ -56,25 +56,33 @@
         <section class="music-section">
 
             <div class="tracks-section" >
-                <!-- <div class="title-tracks">
-                    <img src="assets/img/crown-icon.png" alt="Icone de coroa amarelo">
-                    <h3>Mais ouvidas </h3>
-                </div> -->
-
-                <div class="tracks">
                     <div class="title-tracks">
                         <img src="assets/img/crown-icon.png" alt="Icone de coroa amarelo">
-                        <h3>Mais ouvidas </h3>
+                        <h3>Artistas e musicas mais ouvidas por periodo</h3>
+                        <h3>Selecione um tempo: </h3>
                     </div>
-
-                    <div class="list-tracks">
-
-                    </div>
-
-                    <div class="list-artists">
+                    <div class="selection-section">
+                        <div class="btn-group" role="group" aria-label="Opções para melhor musicas e artistas por periodo">
+                            <input type="radio" class="btn-check" name="time-range" id="4weeks" autocomplete="off" value="short_term">
+                            <label class="btn btn-outline-primary" for="4weeks">Um Mês</label>
                         
+                            <input type="radio" class="btn-check" name="time-range" id="6months" autocomplete="off" checked value="medium_term">
+                            <label class="btn btn-outline-primary" for="6months">Seis Meses</label>
+                        
+                            <input type="radio" class="btn-check" name="time-range" id="alltime" autocomplete="off" value="long_term">
+                            <label class="btn btn-outline-primary" for="alltime">Desde o Início</label>
+                        </div>
                     </div>
-                </div>
+                    <div class="section-top">
+                        <div class="tracks">
+                            <h2>Musicas</h2>
+                            <div class="list-tracks"></div>
+                        </div>
+                        <div class="artists">
+                            <h2>Artistas</h2>
+                            <div class="list-artists"></div>
+                        </div>
+                    </div>
             </div>
 
             <div>
