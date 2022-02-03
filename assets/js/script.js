@@ -1,6 +1,12 @@
 const trackSection = document.querySelector('.list-tracks');
 const listenSection = document.querySelector('#current-track');
 const artistSection = document.querySelector('.list-artists');
+const body = document.querySelector('body');
+const btnDark = document.querySelector('.button-dark');
+
+// ---------------
+
+btnDark.addEventListener('click', () => body.classList.toggle('dark-mode'));
 
 function createDivTrack(url, nome, artista) {
     const figure = document.createElement('figure');

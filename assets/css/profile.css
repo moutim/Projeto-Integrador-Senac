@@ -7,17 +7,31 @@
 
 /* Linkando fontes */
 @font-face {
-    font-family: Spotify;
-    src: url(/assets/fonts/GothamBook.ttf);
-    src: url(/assets/fonts/Gotham-Black.otf);
-    font-weight: normal;
+    font-family: 'Circular';
+    src: url(/assets/fonts/CircularStd-Black.otf);
+    src: url(/assets/fonts/CircularStd-Bold.otf);
+    src: url(/assets/fonts/CircularStd-Book.otf);
+    src: url(/assets/fonts/CircularStd-Light.otf);
+    src: url(/assets/fonts/CircularStd-Medium.otf);
 }
 
 body {
-    font-family: Spotify;
+    font-family: 'Circular';
+}
+
+.mode-section {
+    margin: 10px;
+    justify-content: flex-end;
+    display: flex;
+    height: 50px;
+}
+
+/* Classe para manipular via JS */
+.dark-mode {
     background-color: #191414;
     color: white;
 }
+/* ---------------------------- */
 
 /* Regras para a secao de informacoes do perfil*/
 .foto-perfil {
@@ -26,12 +40,30 @@ body {
     flex-direction: column;
 }
 
+#nome-display {
+    margin: 15px 0;
+    letter-spacing: -1px;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+#numero-playlists, #seguidores {
+    font-weight: 600;
+}
+
 .foto-perfil img {
-    border-radius: 15px;
-    width: 180px;
+    border-radius: 50%;
+    width: 200px;
     height: 200px;
-    margin: 20px 0;
-    filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.089));
+}
+
+iframe {
+    border-radius: 15px;
+    padding: 5px;
+}
+
+img {
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
 }
 
 .icons-perfil {
@@ -43,13 +75,17 @@ body {
 .icons-perfil div img {
     max-width: 100%;
     padding: 25px;
-    filter: drop-shadow(5px 5px 5px #222);
+}
+
+h3 {
+    margin: 15px 0;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
 }
 
 .sobre-perfil {
     padding: 10px;
-    text-align: center;
-    font-size: 18px;
 }
 /* ------------------------------ */
 
@@ -75,8 +111,7 @@ body {
     margin: auto;
 }
 
-.title-tracks h3 {
-    font-size: 20px;
+.title-tracks h5 {
     text-align: center;
 }
 
@@ -92,7 +127,6 @@ body {
     border-radius: 15px;
     max-width: 100%;
     padding: 7px;
-    filter: drop-shadow(5px 5px 5px #222);
 }
 
 .tracks-section div figure {
