@@ -7,10 +7,10 @@ const headers = () => {
     };
 };
 
-const fetchData = async (endPoint) => {
+const fetchData = async (endPoint, header = headers()) => {
     const url = `https://api.spotify.com/${endPoint}`;
     try{
-        const response = await fetch(url, headers());
+        const response = await fetch(url, header);
         const data = await response.json();
         return data;
     } catch(erro){

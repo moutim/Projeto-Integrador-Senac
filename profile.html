@@ -16,17 +16,20 @@
 <body>
     <main>
         <div class="mode-section">
-            <!-- <button id="teste">LOGAR</button> -->
-            <!-- <button id="play">TESTES</button> -->
+            <button id="teste">LOGAR</button>
+            <button id="play">TESTES</button>
             <img src="assets/img/lamp-icon.png" alt="Icone de lampada azul" class="button-dark">
         </div>
             <section class="info-perfil">
             <div class="foto-perfil">
-                <img src="https://i.pinimg.com/originals/17/14/14/171414a4c9fbba82d7b893c78b45c87a.jpg" alt="" id="foto-display">
-                <div>
-                    <h2 id="nome-display">Kratos da Silva</h2>
-                    <p><span id="numero-playlists"></span> Playlists públicas, colaborativas ou seguidas </p>
-                    <p><span id="seguidores" ></span> Seguidores</p>
+                <div class="container-pic"></div>
+                <div class="picture-section">
+                    <img src="https://i.pinimg.com/originals/17/14/14/171414a4c9fbba82d7b893c78b45c87a.jpg" alt="" id="foto-display">
+                    <div>
+                        <h2 id="nome-display">Kratos da Silva</h2>
+                        <p><span id="numero-playlists"></span> Playlists públicas, colaborativas ou seguidas </p>
+                        <p><span id="seguidores" ></span> Seguidores</p>
+                    </div>
                 </div>
             </div>
             <hr>
@@ -91,13 +94,24 @@
             <div>
                 <div class="title-tracks">
                     <img src="assets/img/playlist-icon.png" alt="Icone de coroa amarelo">
-                    <h3>Meu TOP Playlist</h3>
+                    <h3>Crie sua Playlist com as músicas mais escutadas por período</h3>
+                    <h5>Selecione um tempo: </h5>
+                    <div class="selection-section">
+                        <div class="btn-group" role="group" aria-label="Opções para melhor musicas e artistas por periodo">
+                            <input type="radio" class="btn-check time-playlist" name="time-playlist" id="4weeks-playlist" autocomplete="off" value="short_term">
+                            <label class="btn btn-outline-primary" for="4weeks-playlist">Um Mês</label>
+                        
+                            <input type="radio" class="btn-check time-playlist" name="time-playlist" id="6months-playlist" autocomplete="off" checked value="medium_term">
+                            <label class="btn btn-outline-primary" for="6months-playlist">Seis Meses</label>
+                        
+                            <input type="radio" class="btn-check time-playlist" name="time-playlist" id="alltime-playlist" autocomplete="off" value="long_term">
+                            <label class="btn btn-outline-primary" for="alltime-playlist">Desde o Início</label>
+                        </div>
+                    </div>
+                    <button class="btn-create-playlist">Criar!</button>
                 </div>
 
-                <div class="tracks">
-                    <iframe src="https://open.spotify.com/embed/playlist/6S6OqpbCMAspKcxd9oHv8P?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                    <iframe src="https://open.spotify.com/embed/playlist/6S6OqpbCMAspKcxd9oHv8P?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                    <iframe src="https://open.spotify.com/embed/playlist/6S6OqpbCMAspKcxd9oHv8P?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <div class="playlist-section">
                 </div>
             </div>
         </section>

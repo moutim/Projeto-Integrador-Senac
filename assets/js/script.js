@@ -3,6 +3,7 @@ const listenSection = document.querySelector('#current-track');
 const artistSection = document.querySelector('.list-artists');
 const body = document.querySelector('body');
 const btnDark = document.querySelector('.button-dark');
+const playlistSection = document.querySelector('.playlist-section');
 
 // ---------------
 
@@ -38,4 +39,9 @@ function createDivArtist(url, artista) {
 function createIframeMusic(id, type) {
     const iFrame = `<iframe src="https://open.spotify.com/embed/${type}/${id}?utm_source=generator" width="100%" height="250" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
     listenSection.innerHTML = iFrame;
+}
+
+function createIframePlaylist(id) {
+    const iFrame = `<iframe src="https://open.spotify.com/embed/playlist/${id}?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
+    playlistSection.innerHTML = iFrame;
 }

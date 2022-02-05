@@ -34,6 +34,31 @@ body {
 /* ---------------------------- */
 
 /* Regras para a secao de informacoes do perfil*/
+.container-pic {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 50vh;
+    position: relative;
+    z-index: -10;
+}
+
+.container-pic div {
+    background-color: black;
+    width: 13%;
+    height: 13%;
+}
+
+.container-pic div img {
+    border-radius: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.picture-section {
+    position: absolute;
+}
+
 .foto-perfil {
     display: flex;
     align-items: center;
