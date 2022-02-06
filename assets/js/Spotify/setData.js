@@ -8,7 +8,7 @@ const displayFoto = document.querySelector('#foto-display');
 const displaySpotifyUrl = document.querySelector('#spotify-url');
 const displayTotalPlaylists = document.querySelector('#numero-playlists');
 const radioButtons = document.getElementsByName('time-range');
-const btnCreatePlaylist = document.querySelector('btn-create-playlist');
+const btnCreatePlaylist = document.querySelector('.btn-create-playlist');
 const listTracks = document.querySelector('.list-tracks');
 const listArtists = document.querySelector('.list-artists');
 const profileCover = document.querySelector('.container-pic');
@@ -115,14 +115,20 @@ const createPlaylist = async () => {
     const { id } = await fetchData(`v1/users/${userid}/playlists`, header(titlePlaylist));
     const { items } = await fetchData(`v1/me/top/tracks?time_range=${time}&limit=50`);
     const musics = items.map((item) => item.uri);
-    console.log(musics);
     await fetchData(`v1/playlists/${ id }/tracks?uris=${encodeURIComponent(musics.join())}`, header());
     createIframePlaylist( id );
 }
 
-const teste = async () => {
-    const data = await fetchData('v1/users/hugoxavier12');
-    console.log(data);
+const createAsideBackground = async () => {
+    const { items } = await fetchData('v1/me/top/artists?time_range=long_term&limit=18');
+    items.forEach((item, index) => {
+        const { images } = item;
+        const { url } = images[0];
+        if(index <= 8) { createImgAsideLeft(url); return };
+        createImgAsideRight(url);
+    })
+    console.log(items);
 }
+createAsideBackground();
 
-btn.addEventListener('click', createPlaylist);
+btnCreatePlaylist.addEventListener('click', createPlaylist);

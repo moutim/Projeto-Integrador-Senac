@@ -34,46 +34,22 @@ body {
 /* ---------------------------- */
 
 /* Regras para a secao de informacoes do perfil*/
-.container-pic {
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-    height: 50vh;
-    position: relative;
-    z-index: -10;
-}
-
-.container-pic div {
-    background-color: black;
-    width: 13%;
-    height: 13%;
-}
-
-.container-pic div img {
-    border-radius: 0px;
-    height: 100%;
-    width: 100%;
-}
-
-.picture-section {
-    position: absolute;
-}
-
-.foto-perfil {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
 #nome-display {
     margin: 15px 0;
     letter-spacing: -1px;
     font-size: 35px;
     font-weight: 900;
+    text-align: center;
 }
 
 #numero-playlists, #seguidores {
     font-weight: 600;
+}
+
+.picture-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .foto-perfil img {
@@ -158,6 +134,20 @@ h3 {
     text-align: center;
 }
 
+.btn-create-playlist {
+    color: white;
+    background-color: #1db954;
+    border: 2px solid black;
+    width: 190px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 15px auto;
+}
+
+aside {
+    display: none;
+}
+
 /* Media Queries */
 @media screen and (min-width: 600px) {
     main {
@@ -168,11 +158,31 @@ h3 {
 
 @media screen and (min-width: 1100px) {
     main {
-        max-width: 90%;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 
-    .icons-perfil div img {
-        max-width: 120px;
+    article {
+        width: 70%;
+    }
+
+    aside {
+        background-color: #12458498;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+    }
+
+    aside img {
+        opacity: 0.5;
+        flex-grow: 1;
+    }
+
+    .picture-section {
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 
     .title-tracks img {
@@ -209,7 +219,7 @@ h3 {
 
     .bloco-sobre {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .bloco-info {

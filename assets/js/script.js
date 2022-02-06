@@ -1,6 +1,8 @@
 const trackSection = document.querySelector('.list-tracks');
 const listenSection = document.querySelector('#current-track');
 const artistSection = document.querySelector('.list-artists');
+const firstAside = document.querySelector('.firstAside');
+const secondAside = document.querySelector('.secondAside');
 const body = document.querySelector('body');
 const btnDark = document.querySelector('.button-dark');
 const playlistSection = document.querySelector('.playlist-section');
@@ -44,4 +46,18 @@ function createIframeMusic(id, type) {
 function createIframePlaylist(id) {
     const iFrame = `<iframe src="https://open.spotify.com/embed/playlist/${id}?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
     playlistSection.innerHTML = iFrame;
+}
+
+function createImgAsideLeft (url) {
+    const div = document.createElement('div');
+    const img = document.createElement('img');
+    img.setAttribute('src', url);
+    firstAside.appendChild(img);
+}
+
+function createImgAsideRight (url) {
+    const div = document.createElement('div');
+    const img = document.createElement('img');
+    img.setAttribute('src', url)
+    secondAside.appendChild(img);
 }

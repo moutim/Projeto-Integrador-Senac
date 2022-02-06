@@ -15,106 +15,112 @@
 </head>
 <body>
     <main>
-        <div class="mode-section">
-            <button id="teste">LOGAR</button>
-            <button id="play">TESTES</button>
-            <img src="assets/img/lamp-icon.png" alt="Icone de lampada azul" class="button-dark">
-        </div>
-            <section class="info-perfil">
-            <div class="foto-perfil">
-                <div class="container-pic"></div>
-                <div class="picture-section">
-                    <img src="https://i.pinimg.com/originals/17/14/14/171414a4c9fbba82d7b893c78b45c87a.jpg" alt="" id="foto-display">
-                    <div>
-                        <h2 id="nome-display">Kratos da Silva</h2>
-                        <p><span id="numero-playlists"></span> Playlists públicas, colaborativas ou seguidas </p>
-                        <p><span id="seguidores" ></span> Seguidores</p>
-                    </div>
-                </div>
+        <aside class="firstAside">
+        </aside>
+        <article>
+            <div class="mode-section">
+                <button id="teste">LOGAR</button>
+                <button id="play">TESTES</button>
+                <img src="assets/img/lamp-icon.png" alt="Icone de lampada azul" class="button-dark">
             </div>
-            <hr>
-
-            <div class="bloco-sobre">
-                <div class="bloco-info">
-                    <div class="icons-perfil">
-                        <div><a href=""><img src="assets/img/profile-icon.png" alt="Icone para editar perfil"></a></div>
-
-                        <div><a href="" id="spotify-url"><img src="assets/img/spotify-icon.png" alt="Logo do Spotify"></a></div>
-
-                        <div><a href=""><img src="assets/img/playlist-icon.png" alt="Icone para editar perfil"></a></div>
-
-                        <div><a href=""><img src="assets/img/share-icon.png" alt="Icone de compartilhamento"></a></div>
-                    </div>
-
-                    <div class="sobre-perfil">
-                        <h3>Sobre mim</h3>
-                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem odio eligendi unde? Reiciendis</p>
+                <section class="info-perfil">
+                <div class="foto-perfil">
+                    <div class="picture-section">
+                        <img src="https://i.pinimg.com/originals/17/14/14/171414a4c9fbba82d7b893c78b45c87a.jpg" alt="" id="foto-display">
+                        <div>
+                            <h2 id="nome-display">Kratos da Silva</h2>
+                            <p><span id="numero-playlists"></span> Playlists públicas, colaborativas ou seguidas </p>
+                            <p><span id="seguidores" ></span> Seguidores</p>
+                        </div>
                     </div>
                 </div>
+                <hr>
 
-                <div class="escutando-agora">
-                    <h3>O que estou escutando agora</h3>
-                    <div id="current-track"></div>
+                <div class="bloco-sobre">
+                    <div class="bloco-info">
+                        <div class="icons-perfil">
+                            <div><a href=""><img src="assets/img/profile-icon.png" alt="Icone para editar perfil"></a></div>
+
+                            <div><a href="" id="spotify-url"><img src="assets/img/spotify-icon.png" alt="Logo do Spotify"></a></div>
+
+                            <div><a href=""><img src="assets/img/playlist-icon.png" alt="Icone para editar perfil"></a></div>
+
+                            <div><a href=""><img src="assets/img/share-icon.png" alt="Icone de compartilhamento"></a></div>
+                        </div>
+
+                        <div class="sobre-perfil">
+                            <h3>Sobre mim</h3>
+                            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ab nemo, repellendus quo voluptas impedit alias aliquam. Esse illo eaque obcaecati aliquid necessitatibus quidem pariatur quisquam officia? Facere, hic architecto! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum adipisci assumenda nemo libero in.</p>
+                        </div>
+                    </div>
+
+                    <div class="escutando-agora">
+                        <h3>O que estou escutando agora</h3>
+                        <div id="current-track"></div>
+                    </div>
                 </div>
-            </div>
-        </section>
-            <hr>
-        <section class="music-section">
+            </section>
+                <hr>
+            <section class="music-section">
 
-            <div class="tracks-section" >
+                <div class="tracks-section" >
+                        <div class="title-tracks">
+                            <img src="assets/img/crown-icon.png" alt="Icone de coroa amarelo">
+                            <h3>Artistas e músicas mais ouvidas por período</h3>
+                            <h5>Selecione um tempo: </h5>
+                        </div>
+                        <div class="selection-section">
+                            <div class="btn-group" role="group" aria-label="Opções para melhor musicas e artistas por periodo">
+                                <input type="radio" class="btn-check" name="time-range" id="4weeks" autocomplete="off" value="short_term">
+                                <label class="btn btn-outline-primary" for="4weeks">Um Mês</label>
+                            
+                                <input type="radio" class="btn-check" name="time-range" id="6months" autocomplete="off" checked value="medium_term">
+                                <label class="btn btn-outline-primary" for="6months">Seis Meses</label>
+                            
+                                <input type="radio" class="btn-check" name="time-range" id="alltime" autocomplete="off" value="long_term">
+                                <label class="btn btn-outline-primary" for="alltime">Desde o Início</label>
+                            </div>
+                        </div>
+                        <div class="section-top">
+                            <div class="tracks">
+                                <h3>Musicas</h3>
+                                <div class="list-tracks"></div>
+                            </div>
+                            <div class="artists">
+                                <h3>Artistas</h3>
+                                <div class="list-artists"></div>
+                            </div>
+                        </div>
+                </div>
+
+                <div>
                     <div class="title-tracks">
-                        <img src="assets/img/crown-icon.png" alt="Icone de coroa amarelo">
-                        <h3>Artistas e músicas mais ouvidas por período</h3>
+                        <img src="assets/img/playlist-icon.png" alt="Icone de coroa amarelo">
+                        <h3>Crie uma playlist com as 50 músicas mais escutadas por período</h3>
                         <h5>Selecione um tempo: </h5>
-                    </div>
-                    <div class="selection-section">
-                        <div class="btn-group" role="group" aria-label="Opções para melhor musicas e artistas por periodo">
-                            <input type="radio" class="btn-check" name="time-range" id="4weeks" autocomplete="off" value="short_term">
-                            <label class="btn btn-outline-primary" for="4weeks">Um Mês</label>
-                        
-                            <input type="radio" class="btn-check" name="time-range" id="6months" autocomplete="off" checked value="medium_term">
-                            <label class="btn btn-outline-primary" for="6months">Seis Meses</label>
-                        
-                            <input type="radio" class="btn-check" name="time-range" id="alltime" autocomplete="off" value="long_term">
-                            <label class="btn btn-outline-primary" for="alltime">Desde o Início</label>
+                        <div class="selection-section">
+                            <div class="btn-group" role="group" aria-label="Opções para melhor musicas e artistas por periodo">
+                                <input type="radio" class="btn-check time-playlist" name="time-playlist" id="4weeks-playlist" autocomplete="off" value="short_term">
+                                <label class="btn btn-outline-primary" for="4weeks-playlist">Um Mês</label>
+                            
+                                <input type="radio" class="btn-check time-playlist" name="time-playlist" id="6months-playlist" autocomplete="off" checked value="medium_term">
+                                <label class="btn btn-outline-primary" for="6months-playlist">Seis Meses</label>
+                            
+                                <input type="radio" class="btn-check time-playlist" name="time-playlist" id="alltime-playlist" autocomplete="off" value="long_term">
+                                <label class="btn btn-outline-primary" for="alltime-playlist">Desde o Início</label>
+                            </div>
                         </div>
+                        <button class="btn-create-playlist">Criar!</button>
                     </div>
-                    <div class="section-top">
-                        <div class="tracks">
-                            <h3>Musicas</h3>
-                            <div class="list-tracks"></div>
-                        </div>
-                        <div class="artists">
-                            <h3>Artistas</h3>
-                            <div class="list-artists"></div>
-                        </div>
-                    </div>
-            </div>
 
-            <div>
-                <div class="title-tracks">
-                    <img src="assets/img/playlist-icon.png" alt="Icone de coroa amarelo">
-                    <h3>Crie sua Playlist com as músicas mais escutadas por período</h3>
-                    <h5>Selecione um tempo: </h5>
-                    <div class="selection-section">
-                        <div class="btn-group" role="group" aria-label="Opções para melhor musicas e artistas por periodo">
-                            <input type="radio" class="btn-check time-playlist" name="time-playlist" id="4weeks-playlist" autocomplete="off" value="short_term">
-                            <label class="btn btn-outline-primary" for="4weeks-playlist">Um Mês</label>
-                        
-                            <input type="radio" class="btn-check time-playlist" name="time-playlist" id="6months-playlist" autocomplete="off" checked value="medium_term">
-                            <label class="btn btn-outline-primary" for="6months-playlist">Seis Meses</label>
-                        
-                            <input type="radio" class="btn-check time-playlist" name="time-playlist" id="alltime-playlist" autocomplete="off" value="long_term">
-                            <label class="btn btn-outline-primary" for="alltime-playlist">Desde o Início</label>
-                        </div>
+                    <div class="playlist-section">
                     </div>
-                    <button class="btn-create-playlist">Criar!</button>
                 </div>
+            </section>
+        </article>
 
-                <div class="playlist-section">
-                </div>
-            </div>
-        </section>
+        <aside class="secondAside">
+        </aside>
 
     </main>
 
