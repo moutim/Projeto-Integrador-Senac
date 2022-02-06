@@ -12,7 +12,7 @@ const btnCreatePlaylist = document.querySelector('.btn-create-playlist');
 const listTracks = document.querySelector('.list-tracks');
 const listArtists = document.querySelector('.list-artists');
 const profileCover = document.querySelector('.container-pic');
-const btn = document.querySelector('#play');
+// const btn = document.querySelector('#play');
 
 // Header para POST
 const header = (time) => {
@@ -130,5 +130,6 @@ const createAsideBackground = async () => {
     console.log(items);
 }
 createAsideBackground();
-
 btnCreatePlaylist.addEventListener('click', createPlaylist);
+
+btn.addEventListener('click', testando)

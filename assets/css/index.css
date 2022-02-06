@@ -33,11 +33,16 @@
 body {
     background-color: #191414;
     font-family: 'Circular';
-    color: white;
+    /* color: white; */
 }
 
 main {
     margin: 0 10px;
+}
+
+#spotify {
+    max-width: 40%;
+    margin: auto;
 }
 
 .main-section {
@@ -49,45 +54,53 @@ main {
 
 .main-section img {
     width: 500px;
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
 }
 
-.form-div, .form-register {
+.form-div {
+    color: white;
     display: flex;
     flex-direction: column;
     padding: 20px;
     border-radius: 10px;
     background-color: white;
     box-shadow: 0px 10px 24px -6px rgba(0,0,0,0.9);
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(25,20,20,1) 45%);
 }
 
-.form-div input {
-    padding: 10px 70px;
+.form-div h2 {
+    text-align: center;
 }
 
-.form-div label {
-    color: black;
+.section-login {
+    display: flex;
+    flex-direction: column;
 }
 
-button a {
-    color: white;
-    text-decoration: none;
+.section-buttons {
+    display: none;
 }
 
-button a:hover {
-    color: white;
-}
-
-.btn-register {
-    background-color: #b12625 !important;
-}
 .form-div button {
+    width: 180px;
     border: none;
     background-color: #1db954;
     color: white;
     font-weight: 700;
     border-radius: 15px;
-    padding: 5px 35px;
-    text-align: center;
+    padding: 10px 35px;
+    margin: 20px auto 0 auto;
+    box-shadow: 0px 0px 10px 0px #000000;
+    transition: .5s;
+}
+
+.section-buttons button:nth-child(2) {
+    display: none;
+}
+
+.form-div button:hover {
+    background-color: #00e650;
 }
 
 
