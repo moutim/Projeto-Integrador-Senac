@@ -15,6 +15,19 @@
     src: url(/assets/fonts/CircularStd-Medium.otf);
 }
 
+.logo-rotate {
+    animation: rotation 10s infinite linear;
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+}
+@keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
 body {
     font-family: 'Circular';
 }
@@ -32,7 +45,14 @@ body {
     color: white;
 }
 /* ---------------------------- */
+nav {
+    background-color: #124584;
+}
 
+nav li a {
+    font-size: 20px;
+    font-weight: 600;
+}
 /* Regras para a secao de informacoes do perfil*/
 #nome-display {
     margin: 15px 0;
@@ -157,6 +177,10 @@ aside {
 }
 
 @media screen and (min-width: 1100px) {
+    nav img {
+        height: 55px;
+    }
+
     main {
         max-width: 100%;
         display: flex;

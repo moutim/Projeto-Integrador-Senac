@@ -1,3 +1,9 @@
+// Ativando menu hamburguer do Materialize
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+});
+
+// Pegando elementos
 const trackSection = document.querySelector('.list-tracks');
 const listenSection = document.querySelector('#current-track');
 const artistSection = document.querySelector('.list-artists');
@@ -6,7 +12,6 @@ const secondAside = document.querySelector('.secondAside');
 const body = document.querySelector('body');
 const btnDark = document.querySelector('.button-dark');
 const playlistSection = document.querySelector('.playlist-section');
-
 // ---------------
 
 btnDark.addEventListener('click', () => body.classList.toggle('dark-mode'));

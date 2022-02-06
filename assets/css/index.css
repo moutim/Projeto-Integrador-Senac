@@ -17,7 +17,7 @@
 }
 
 /* Animation para a logo */
-#loading {
+.logo-rotate {
     animation: rotation 10s infinite linear;
     filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
 }
