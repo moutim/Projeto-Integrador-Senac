@@ -1,12 +1,8 @@
 // import createDivTrack from "../script";
 
 // Elementos necessarios
-const displayName = document.querySelector('#nome-display');
-const displaySeguidores = document.querySelector('#seguidores');
+
 const displayPlaylists = document.querySelector('#numero-playlists')
-const displayFoto = document.querySelector('#foto-display');
-const displaySpotifyUrl = document.querySelector('#spotify-url');
-const displayTotalPlaylists = document.querySelector('#numero-playlists');
 const radioButtons = document.getElementsByName('time-range');
 const btnCreatePlaylist = document.querySelector('.btn-create-playlist');
 const listTracks = document.querySelector('.list-tracks');
@@ -33,27 +29,16 @@ const header = (time) => {
     return headerPOST;
 }
 
-const setProfileInfo = async () => {
-    const data = await fetchData('v1/me');
-    const { id, display_name, followers: {total}, images, external_urls: { spotify } } = data;
-    localStorage.setItem('user-id', id);
-    const { url } = images[0];
-    displayName.innerText = display_name;
-    displaySpotifyUrl.setAttribute('href', spotify);
-    displaySeguidores.innerText = total;
-    displayFoto.setAttribute('src', url);
-}
-setProfileInfo();
-
 const setTopMusics = async (time = '?time_range=medium_term') => {
     const data = await fetchData(`v1/me/top/tracks${time}`);
     const arrayMusic = [];
     data.items.forEach((item, index) => index <= 2 ? arrayMusic.push(item) : false );
-    arrayMusic.forEach((item) => {
+    arrayMusic.forEach((item, index) => {
+        const contador = index + 1;
         const { name, artists, album: {images} } = item;
         const { name: artistName } = artists[0];
         const { url } = images[0];
-        createDivTrack(url, name, artistName);
+        createDivTrack(url, name, artistName, contador);
     })
 }
 setTopMusics();
@@ -62,10 +47,11 @@ const setTopArtists = async (time = '?time_range=medium_term') => {
     const data = await fetchData(`v1/me/top/artists${time}`);
     const arrayArtist = [];
     data.items.forEach((item, index) => index <= 2 ? arrayArtist.push(item) : false);
-    arrayArtist.forEach((item) => {
+    arrayArtist.forEach((item, index) => {
+        const contador = index + 1;
         const { name, images } = item;
         const { url } = images[0];
-        createDivArtist(url, name);
+        createDivArtist(url, name, contador);
     })
 }
 setTopArtists();
@@ -88,13 +74,6 @@ const setCurrencyPlaying = async () => {
     }
 }
 setCurrencyPlaying();
-
-const getInfoPlaylists = async () => {
-    const data = await fetchData('v1/me/playlists?limit=50&offset=5');
-    const { total } = data;
-    displayTotalPlaylists.innerText = total;
-}
-getInfoPlaylists();
 
 const getTrackByTimeRange = (event) => {
     const time = event.target.value;
@@ -127,9 +106,8 @@ const createAsideBackground = async () => {
         if(index <= 8) { createImgAsideLeft(url); return };
         createImgAsideRight(url);
     })
-    console.log(items);
 }
 createAsideBackground();
 btnCreatePlaylist.addEventListener('click', createPlaylist);
 
-btn.addEventListener('click', testando)
+// btn.addEventListener('click', testando)

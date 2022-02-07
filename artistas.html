@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
     <link rel="stylesheet" href="assets/css/profile.css">
+    <link rel="stylesheet" href="assets/css/artistas.css">
     <script src="assets/js/script.js" defer></script>
-    <script src="assets/js/Spotify/getAcessToken.js" defer></script>
     <script src="assets/js/Spotify/fetchData.js" defer></script>
-    <script src="assets/js/scriptArtistas.js" defer></script>
+    <script src="assets/js/Spotify/setDataGlobal.js" defer></script>
+    <script src="assets/js/Spotify/setDataArtistas.js" defer></script>
 </head>
 <body>
     <header>
-        <button class="teste-aa">TESTA</button>
         <nav>
             <div class="nav-wrapper">
               <a href="profile.html" class="brand-logo center"><img class="logo-rotate" src="assets/img/Plus+music.svg" alt="Logo plus music" height="40px"></a>
@@ -44,38 +44,44 @@
     <main>
         <aside class="firstAside">
         </aside>
+        
         <article>
-            <div class="foto-perfil">
-                <div class="picture-section">
-                    <img src="https://i.pinimg.com/originals/17/14/14/171414a4c9fbba82d7b893c78b45c87a.jpg" alt="" id="foto-display">
-                    <div>
-                        <h2 id="nome-display">Kratos da Silva</h2>
-                        <p><span id="numero-playlists"></span> Playlists públicas, colaborativas ou seguidas </p>
-                        <p><span id="seguidores" ></span> Seguidores</p>
-                    </div>
-                </div>
+            <div class="mode-section">
+                <img src="assets/img/lamp-icon.png" alt="Icone de lampada azul" class="button-dark">
             </div>
-            <hr>
-            <div>
-                <h3>50 artistas mais tocados</h3>
-                <h5>Selecione um período: </h5>
-                <div class="selection-section">
-                    <div class="btn-group" role="group" aria-label="Opções para melhor musicas e artistas por periodo">
-                        <input type="radio" class="btn-check" name="time-range-artists" id="4weeks" autocomplete="off" value="short_term">
-                        <label class="btn btn-outline-primary" for="4weeks">Um Mês</label>
-                    
-                        <input type="radio" class="btn-check" name="time-range-artists" id="6months" autocomplete="off" checked value="medium_term">
-                        <label class="btn btn-outline-primary" for="6months">Seis Meses</label>
-                    
-                        <input type="radio" class="btn-check" name="time-range-artists" id="alltime" autocomplete="off" value="long_term">
-                        <label class="btn btn-outline-primary" for="alltime">Desde o Início</label>
+                <section class="info-perfil">
+                    <div class="foto-perfil">
+                        <div class="picture-section">
+                            <img src="https://i.pinimg.com/originals/17/14/14/171414a4c9fbba82d7b893c78b45c87a.jpg" alt="" id="foto-display">
+                            <div>
+                                <h2 id="nome-display">Kratos da Silva</h2>
+                                <p><span id="numero-playlists"></span> Playlists públicas, colaborativas ou seguidas </p>
+                                <p><span id="seguidores" ></span> Seguidores</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <hr>
 
-                <div class="all-artists">
+                    <h3>Os 50 artistas que você mais escutou</h3>
+                    <h5>Selecione um período</h5>
+
+                    <div class="selection-section">
+                        <div class="btn-group" role="group" aria-label="Opções para melhor musicas e artistas por periodo">
+                            <input type="radio" class="btn-check" name="time-range-artists" id="4weeks-artists" autocomplete="off" value="short_term">
+                            <label class="btn btn-outline-primary" for="4weeks-artists">Um Mês</label>
+                        
+                            <input type="radio" class="btn-check" name="time-range-artists" id="6months-artists" autocomplete="off" checked value="medium_term">
+                            <label class="btn btn-outline-primary" for="6months-artists">Seis Meses</label>
+                        
+                            <input type="radio" class="btn-check" name="time-range-artists" id="alltime-artists" autocomplete="off" value="long_term">
+                            <label class="btn btn-outline-primary" for="alltime-artists">Desde o Início</label>
+                        </div>
+                    </div>
+
+                </section>
+                <div class="top50-artists">
 
                 </div>
-            </div>
         </article>
 
         <aside class="secondAside">

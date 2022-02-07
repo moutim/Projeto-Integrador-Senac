@@ -1,0 +1,40 @@
+.top50-tracks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 50px 0;
+}
+
+.top50-tracks figure img {
+    border-radius: 15px;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.top50-tracks figure figcaption {
+    text-align: center;
+}
+
+.music-name {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.artist-name {
+    font-size: 15px;
+}
+
+h5 {
+    text-align: center;
+}
+
+.top50-tracks figure {
+    width: 27%;
+    margin: 20px 0;
+}
+
+@media screen and (min-width: 1100px) {
+    .top50-tracks figure {
+        width: 24%;
+    }
+}

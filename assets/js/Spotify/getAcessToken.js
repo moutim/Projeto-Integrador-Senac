@@ -64,6 +64,7 @@ const getAcessToken = () => {
     xhr.onload = handleAuthorizationResponse;
 
     btnProfile.style.display = 'block';
+    btnActive.style.display = 'none';
 }
 
 function handleAuthorizationResponse(){

@@ -1,0 +1,32 @@
+.top50-artists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 50px 0;
+}
+
+.top50-artists figure img {
+    border-radius: 15px;
+    max-width: 100%;
+}
+
+.top50-artists figure figcaption {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+h5 {
+    text-align: center;
+}
+
+.top50-artists figure {
+    width: 27%;
+    margin: 0;
+}
+
+@media screen and (min-width: 1100px) {
+    .top50-artists figure {
+        width: 24%;
+    }
+}

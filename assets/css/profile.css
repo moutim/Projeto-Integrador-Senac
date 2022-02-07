@@ -111,6 +111,15 @@ h3 {
 /* ------------------------------ */
 
 /* Regras para secao de musicas */
+.music-name, .artist-top-name {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.artist-name {
+    font-size: 15px;
+}
+
 .selection-section {
     display: flex;
     justify-content: center;
@@ -119,7 +128,8 @@ h3 {
 .btn {
     color: white;
     background-color: #1db954;
-    border: 2px solid black;
+    border: .5px solid black;
+    border-radius: 20px;
 }
 
 .title-tracks {
@@ -156,8 +166,10 @@ h3 {
 
 .btn-create-playlist {
     color: white;
+    font-weight: 600;
+    font-size: 20px;
     background-color: #1db954;
-    border: 2px solid black;
+    border: .5px solid black;
     width: 190px;
     padding: 5px 10px;
     border-radius: 15px;

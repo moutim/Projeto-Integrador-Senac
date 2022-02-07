@@ -16,14 +16,16 @@ const playlistSection = document.querySelector('.playlist-section');
 
 btnDark.addEventListener('click', () => body.classList.toggle('dark-mode'));
 
-function createDivTrack(url, nome, artista) {
+function createDivTrack(url, nome, artista, contador) {
     const figure = document.createElement('figure');
     const img = document.createElement('img');
     const figcaption = document.createElement('figcaption');
     const figcaption2 = document.createElement('figcaption');
     img.setAttribute('src', url);
     img.setAttribute('alt', `Capa da musica ${nome} - ${artista}`);
-    figcaption.innerText = nome;
+    figcaption.innerText = `${contador} - ${nome}`;
+    figcaption.classList.add('music-name');
+    figcaption2.classList.add('artist-name');
     figcaption2.innerText = artista;
     figure.appendChild(img);
     figure.appendChild(figcaption);
@@ -31,13 +33,14 @@ function createDivTrack(url, nome, artista) {
     trackSection.appendChild(figure);
 }
 
-function createDivArtist(url, artista) {
+function createDivArtist(url, artista, contador) {
     const figure = document.createElement('figure');
     const img = document.createElement('img');
     const figcaption = document.createElement('figcaption');
     img.setAttribute('src', url);
     img.setAttribute('alt', `${artista} na foto`);
-    figcaption.innerText = artista;
+    figcaption.innerText = `${contador} - ${artista}`;
+    figcaption.classList.add('artist-top-name');
     figure.appendChild(img);
     figure.appendChild(figcaption);
     artistSection.appendChild(figure);
