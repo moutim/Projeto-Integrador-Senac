@@ -21,15 +21,8 @@ const getInfoPlaylists = async () => {
 }
 getInfoPlaylists();
 
-
-// const createAsideBackground = async () => {
-//     const { items } = await fetchData('v1/me/top/artists?time_range=long_term&limit=18');
-//     items.forEach((item, index) => {
-//         const { images } = item;
-//         const { url } = images[0];
-//         if(index <= 8) { createImgAsideLeft(url); return };
-//         createImgAsideRight(url);
-//     })
-// }
-// createAsideBackground();
-
+window.onload = () => {
+    const body = document.querySelector('body');
+    const state = localStorage.getItem('dark-mode');
+    if(state) { body.classList.add(state) }
+}

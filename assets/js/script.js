@@ -14,7 +14,14 @@ const btnDark = document.querySelector('.button-dark');
 const playlistSection = document.querySelector('.playlist-section');
 // ---------------
 
-btnDark.addEventListener('click', () => body.classList.toggle('dark-mode'));
+btnDark.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('dark-mode', 'dark-mode');
+    } else {
+        localStorage.setItem('dark-mode', '');
+    }
+})
 
 function createDivTrack(url, nome, artista, contador) {
     const figure = document.createElement('figure');
