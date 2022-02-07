@@ -11,7 +11,7 @@ const CLIENT_ID = '58cba2a8bbb440fa89bb0f2c6d74dedc';
 // const CLIENT_ID = '3b321dd51d7e4ee8875f06b7ed2347f5';
 const CLIENT_SECRET = '2e18542402714a3dbdab9b3dd310afd3';
 const URL_ATHORIZATION = 'https://accounts.spotify.com/authorize';
-const REDIRECT_URL = 'http://127.0.0.1:5500/index.html';
+const REDIRECT_URL = 'https://moutim.github.io/Projeto-Integrador-Senac/index.html';
 const TOKEN = "https://accounts.spotify.com/api/token";
 
 const scopesList = [
@@ -52,7 +52,7 @@ const getAcessToken = () => {
 
     let body = "grant_type=authorization_code";
     body += "&code=" + code; 
-    body += "&redirect_uri=" + encodeURI('http://127.0.0.1:5500/index.html');
+    body += "&redirect_uri=" + encodeURI('https://moutim.github.io/Projeto-Integrador-Senac/index.html');
     body += "&client_id=" + CLIENT_ID;
     body += "&client_secret=" + CLIENT_SECRET;
 
